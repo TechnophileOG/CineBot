@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-generated website">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index, follow">
+
+  <!-- Performance optimization: Preload critical resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    as="style">
+
+  <!-- {headerScripts} -->
+
+  <!-- Core CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+            secondary: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+            accent: {
+              50: '#f8f8f8',
+              100: '#e8e8e8',
+              200: '#d3d3d3',
+              300: '#a3a3a3',
+              400: '#737373',
+              500: '#525252',
+              600: '#404040',
+              700: '#262626',
+              800: '#171717',
+              900: '#0a0a0a',
+              950: '#030303',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+            '30': '7.5rem',
+          },
+          maxWidth: {
+            '8xl': '88rem',
+            '9xl': '96rem',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in',
+            'fade-out': 'fadeOut 0.5s ease-out',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'slide-down': 'slideDown 0.5s ease-out',
+            'slide-left': 'slideLeft 0.5s ease-out',
+            'slide-right': 'slideRight 0.5s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'scale-out': 'scaleOut 0.5s ease-out',
+            'spin-slow': 'spin 3s linear infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-slow': 'bounce 3s infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeOut: {
+              '0%': { opacity: '1' },
+              '100%': { opacity: '0' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideDown: {
+              '0%': { transform: 'translateY(-20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideLeft: {
+              '0%': { transform: 'translateX(20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideRight: {
+              '0%': { transform: 'translateX(-20px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.9)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            scaleOut: {
+              '0%': { transform: 'scale(1.1)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+          aspectRatio: {
+            'portrait': '3/4',
+            'landscape': '4/3',
+            'ultrawide': '21/9',
+          },
+        },
+      },
+      variants: {
+        extend: {
+          opacity: ['disabled'],
+          cursor: ['disabled'],
+          backgroundColor: ['active', 'disabled'],
+          textColor: ['active', 'disabled'],
+        },
+      },
+    }
+  </script>
+
+  <!-- Utilities and Components -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+
+  <!-- Optimized Font Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Base Styles -->
+  <style>
+    * {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* Webkit browsers like Chrome, Safari, newer Edge */
+    *::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #666;
+    }
+
+    /* Remove tap highlight on mobile */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Improve text rendering */
+    body {
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Focus outline styles */
+    :focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    /* Print styles */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+
+      a[href]:after {
+        content: " (" attr(href) ")";
+      }
+    }
+  </style>
+
+  <!-- Enhanced Image Handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              const tempImage = new Image();
+              tempImage.onload = () => {
+                img.src = img.dataset.src;
+                img.classList.remove('opacity-0');
+                img.classList.add('opacity-100');
+              };
+              tempImage.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+      });
+
+      const loadImage = (img) => {
+        if ('loading' in HTMLImageElement.prototype) {
+          img.loading = 'lazy';
+        }
+
+        img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+
+        img.onerror = () => {
+          const width = img.getAttribute('width') || img.clientWidth || 300;
+          const height = img.getAttribute('height') || img.clientHeight || 200;
+          img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+          img.alt = 'Image unavailable';
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100', 'error-image');
+        };
+
+        if (img.dataset.src) {
+          imageObserver.observe(img);
+        } else {
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        }
+      };
+
+      document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+      // Watch for dynamically added images
+      new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+          mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+              if (node.tagName === 'IMG') {
+                loadImage(node);
+              }
+              node.querySelectorAll('img').forEach(loadImage);
+            }
+          });
+        });
+      }).observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    });
+
+    // Performance monitoring
+    if ('performance' in window && 'PerformanceObserver' in window) {
+      // Create performance observer
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // console.log(`LCP: ${entry.startTime}ms`);
+          }
+          if (entry.entryType === 'first-input') {
+            // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+          }
+          if (entry.entryType === 'layout-shift') {
+            // console.log(`CLS: ${entry.value}`);
+          }
+        });
+      });
+
+      // Observe performance metrics
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+      // Log basic performance metrics
+      window.addEventListener('load', () => {
+        const timing = performance.getEntriesByType('navigation')[0];
+        console.log({
+          'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+          'TCP Connection': timing.connectEnd - timing.connectStart,
+          'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+          'Page Load': timing.loadEventEnd - timing.navigationStart
+        });
+      });
+    }
+
+    // Handle offline/online status
+    window.addEventListener('online', () => {
+      document.body.classList.remove('offline');
+      console.log('Connection restored');
+    });
+
+    window.addEventListener('offline', () => {
+      document.body.classList.add('offline');
+      console.log('Connection lost');
+    });
+  </script>
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="relative z-50 bg-white dark:bg-gray-900">
+    <!-- Header content goes here -->
+  </header>
+
+  <!-- Main content area -->
+  <main id="main-content" class="flex-1 relative ">
+    <!-- Content will be injected here -->
+  </main>
+
+  <!-- {bodyScripts} -->
+
+</body>
+
+</html>
+<element id="b8e8c6e5-601d-4534-ba1c-6b92d180febb" data-section-id="b8e8c6e5-601d-4534-ba1c-6b92d180febb">
+
+
+  <div id="root">
+    <nav id="navbar" class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Navbar Content -->
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <img class="h-8 w-auto transition-opacity duration-300 opacity-100"
+              src="https://json2video.com/images/json2video-logo.svg" alt="Logo" loading="lazy">
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a href="#home" class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">Home</a>
+              <a href="#features"
+                class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">Features</a>
+              <a href="#how-it-works"
+                class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">How It Works</a>
+              <a href="#pricing"
+                class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">Pricing</a>
+              <a href="#testimonials"
+                class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">Testimonials</a>
+              <a href="#developers"
+                class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">Developers</a>
+              <a href="#faq" class="text-[15px] text-white/90 hover:text-white transition-colors duration-200">FAQ</a>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="hidden lg:flex items-center">
+            <a href="https://discord.gg/4HBpPnYE4W"
+              class="inline-flex items-center px-6 py-2.5 border border-transparent text-[15px] font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30">
+              Use BOT
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="lg:hidden">
+            <button type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-blue-400 transition-colors"
+              id="mobile-menu-button">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div class="lg:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#home"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">Home</a>
+          <a href="#features"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">Features</a>
+          <a href="#how-it-works"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">How It
+            Works</a>
+          <a href="#pricing"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">Pricing</a>
+          <a href="#testimonials"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">Testimonials</a>
+          <a href="#developers"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">Developers</a>
+          <a href="#faq"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 transition-colors">FAQ</a>
+          <div class="mt-4 px-3">
+            <a href="https://discord.gg/4HBpPnYE4W"
+              class="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+              Use BOT
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Add scroll event listener for navbar background
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          navbar.classList.add('shadow-lg');
+        } else {
+          navbar.classList.remove('shadow-lg');
+        }
+      });
+    });
+  </script>
+
+</element>
+<element id="d5c08dff-ca3e-483d-b801-d9490dc2d7ce" data-section-id="d5c08dff-ca3e-483d-b801-d9490dc2d7ce">
+
+
+  <htmlcode id="el-0v7rcqlz">
+    <div id="root">
+      <section id="hero" class="relative min-h-screen pt-16 bg-neutral-900 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 overflow-hidden" id="el-zjwosaiu">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.15),transparent_70%)]"
+            id="el-b2frqyui"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_70%)]"
+            id="el-1619l7xq"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32" id="el-jgkgstro">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="el-hbuop3ri">
+            <!-- Text Content -->
+            <div class="text-center lg:text-left animate__animated animate__fadeInLeft" id="el-qotubwpp">
+              <h1 class="text-4xl md:text-6xl font-bold text-white mb-6" id="el-tl9vk300">
+                Welcome to <span class="text-blue-500" id="el-0pok824x">Json2Video Discord Bot</span>
+              </h1>
+              <p class="text-lg md:text-xl text-neutral-300 mb-8" id="el-txy12dj6">
+                Create stunning video reels with our pre-built templates. Perfect for social
+                media content and marketing campaigns.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" id="el-aob4vjl1">
+                <button
+                  class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 animate__animated animate__pulse animate__infinite"
+                  id="el-zr47hook">
+                  <a href="https://discord.gg/4HBpPnYE4W">CLICK ME!</a>
+                  <button
+                    class="px-8 py-4 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500/10 transition-all"
+                    id="el-0x1jn1ah">
+                    <a href="https://json2video.com/">Learn More</a>
+                  </button>
+              </div>
+            </div>
+
+            <!-- Image/Visual Content -->
+            <div class="relative animate__animated animate__fadeInRight" id="el-o4zkots1">
+              <div class="relative w-full aspect-video rounded-lg overflow-hidden " id="el-cyr99dmf">
+                <img src="https://i.postimg.cc/GhxyrHPC/image-removebg-preview.png" alt="Video Generation Preview"
+                  class="w-full h-full object-cover opacity-80 transition-opacity duration-300 opacity-100"
+                  loading="lazy" id="el-n1b83eed">
+                <div class="absolute inset-0 bg-gradient-to-tr from-neutral-900/80 to-transparent" id="el-dwy4km2m">
+                </div>
+              </div>
+
+              <!-- Floating Elements -->
+              <div class="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" id="el-r60edx2w">
+              </div>
+              <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-600/20 rounded-full blur-2xl" id="el-iank77mw">
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center animate__animated animate__fadeInUp"
+            id="el-7n7j6828">
+            <div class="p-4 rounded-lg bg-neutral-800/50 backdrop-blur-sm" id="el-vgaqzwkj">
+              <h3 class="text-3xl font-bold text-blue-500" id="el-c30nmikx">40s</h3>
+              <p class="text-neutral-400" id="el-f43m3pfm">Max Reel Generation time(FHD)</p>
+            </div>
+            <div class="p-4 rounded-lg bg-neutral-800/50 backdrop-blur-sm" id="el-y4lpn64e">
+              <h3 class="text-3xl font-bold text-blue-500" id="el-v0andil8">2k+</h3>
+              <p class="text-neutral-400" id="el-k2aiiq7p">Active Users</p>
+            </div>
+            <div class="p-4 rounded-lg bg-neutral-800/50 backdrop-blur-sm" id="el-wg9ou09q">
+              <h3 class="text-3xl font-bold text-blue-500" id="el-2rwdq0jl">1M+</h3>
+              <p class="text-neutral-400" id="el-63cezv51">Reels Views</p>
+            </div>
+            <div class="p-4 rounded-lg bg-neutral-800/50 backdrop-blur-sm" id="el-vekdk7ow">
+              <h3 class="text-3xl font-bold text-blue-500" id="el-z8fbwlgr">24/7</h3>
+              <p class="text-neutral-400" id="el-p7rnfeou">Support</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" id="el-wap9hlla">
+          <div class="w-6 h-10 border-2 border-neutral-500 rounded-full flex justify-center" id="el-dm1m5kn2">
+            <div class="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-scroll" id="el-zc9ot6ef"></div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+
+          100% {
+            transform: translateY(15px);
+            opacity: 0;
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 1.5s infinite;
+        }
+      </style>
+    </div>
+  </htmlcode>
+</element>
+<element id="7550ed03-256b-42f8-9b31-5c0124b7fd1e" data-section-id="7550ed03-256b-42f8-9b31-5c0124b7fd1e">
+
+  <htmlCode>
+    <div id="root">
+      <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-neutral-900 mb-4">Powerful Features</h2>
+            <p class="text-lg text-neutral-600 max-w-2xl mx-auto">Transform your content creation process with our
+              advanced features designed for efficiency and quality.</p>
+          </div>
+
+          <!-- Features Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div
+              class="relative group p-8 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity">
+              </div>
+              <div class="relative">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                  <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-4">Video Reel Generation</h3>
+                <p class="text-neutral-600">Create stunning video reels with our pre-built templates. Perfect for social
+                  media content and marketing campaigns.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="relative group p-8 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s;">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity">
+              </div>
+              <div class="relative">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                  <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-4">User-Friendly Commands</h3>
+                <p class="text-neutral-600">Simple and intuitive commands make video creation accessible to everyone,
+                  regardless of technical expertise.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="relative group p-8 rounded-2xl bg-neutral-50 border border-neutral-200 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.4s;">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity">
+              </div>
+              <div class="relative">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                  <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold text-neutral-900 mb-4">API Integration</h3>
+                <p class="text-neutral-600">Seamless API integration for advanced features and customization. Perfect
+                  for developers and power users.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Features -->
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-200 animate__animated animate__fadeInLeft">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">Advanced Customization</h3>
+              <ul class="space-y-4">
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Multiple video formats and resolutions (FHD, HD)
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Custom watermarks and branding
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Advanced editing capabilities
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-neutral-50 p-8 rounded-2xl border border-neutral-200 animate__animated animate__fadeInRight">
+              <h3 class="text-xl font-bold text-neutral-900 mb-4">Enterprise Features</h3>
+              <ul class="space-y-4">
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Bulk video generation
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Priority rendering
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  24/7 premium support
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="817fa6b0-093f-4c86-8bc1-9c9c18bb3312" data-section-id="817fa6b0-093f-4c86-8bc1-9c9c18bb3312">
+
+  <htmlCode>
+    <div id="root">
+      <section id="howItWorks" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-white mb-4">How to use Json2Video Bot</h2>
+            <p class="text-lg text-neutral-400 max-w-2xl mx-auto">Get started in 4 simple steps and create your first
+              video in minutes</p>
+          </div>
+
+          <!-- Steps Container -->
+          <div class="relative">
+            <!-- Timeline Line -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500/20"></div>
+
+            <!-- Steps -->
+            <div class="space-y-16">
+              <!-- Step 1 -->
+              <div
+                class="relative flex items-center justify-center md:justify-between animate__animated animate__fadeInLeft">
+                <div class="w-full md:w-5/12 flex flex-col items-center md:items-end text-center md:text-right">
+                  <div
+                    class="bg-neutral-800 p-6 rounded-2xl border border-neutral-700 hover:border-blue-500 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Connect with Bot</h3>
+                    <p class="text-neutral-400">Join our server or invite Json2Video Bot into your own server for use
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-12 h-12 rounded-full border-4 border-blue-500 bg-neutral-900 text-blue-500 font-bold">
+                  1
+                </div>
+                <div class="w-full md:w-5/12"></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div
+                class="relative flex items-center justify-center md:justify-between animate__animated animate__fadeInRight">
+                <div class="w-full md:w-5/12"></div>
+                <div
+                  class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-12 h-12 rounded-full border-4 border-blue-500 bg-neutral-900 text-blue-500 font-bold">
+                  2
+                </div>
+                <div class="w-full md:w-5/12 flex flex-col items-center md:items-start text-center md:text-left">
+                  <div
+                    class="bg-neutral-800 p-6 rounded-2xl border border-neutral-700 hover:border-blue-500 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Configure Settings</h3>
+                    <p class="text-neutral-400">Using the bot, configure your desired video settings and templates</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div
+                class="relative flex items-center justify-center md:justify-between animate__animated animate__fadeInLeft">
+                <div class="w-full md:w-5/12 flex flex-col items-center md:items-end text-center md:text-right">
+                  <div
+                    class="bg-neutral-800 p-6 rounded-2xl border border-neutral-700 hover:border-blue-500 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Generate Content</h3>
+                    <p class="text-neutral-400">Let the bot work its magic and create your custom video content</p>
+                  </div>
+                </div>
+                <div
+                  class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-12 h-12 rounded-full border-4 border-blue-500 bg-neutral-900 text-blue-500 font-bold">
+                  3
+                </div>
+                <div class="w-full md:w-5/12"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div
+                class="relative flex items-center justify-center md:justify-between animate__animated animate__fadeInRight">
+                <div class="w-full md:w-5/12"></div>
+                <div
+                  class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-12 h-12 rounded-full border-4 border-blue-500 bg-neutral-900 text-blue-500 font-bold">
+                  4
+                </div>
+                <div class="w-full md:w-5/12 flex flex-col items-center md:items-start text-center md:text-left">
+                  <div
+                    class="bg-neutral-800 p-6 rounded-2xl border border-neutral-700 hover:border-blue-500 transition-all">
+                    <h3 class="text-2xl font-bold text-white mb-2">Share & Grow</h3>
+                    <p class="text-neutral-400">Download and share your videos across social media platforms</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="mt-16 text-center animate__animated animate__fadeInUp">
+              <button
+                class="px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105">
+                <a href="https://discord.gg/4HBpPnYE4W">START CREATING NOW</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="da13a201-c56c-400d-b6e8-35f1973225f1" data-section-id="da13a201-c56c-400d-b6e8-35f1973225f1">
+
+  <htmlCode>
+    <div id="root">
+      <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-neutral-900 mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-lg text-neutral-600 max-w-2xl mx-auto">Choose the perfect plan for your content creation
+              needs</p>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <!-- Free Plan -->
+            <div
+              class="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">
+                  Professional
+                </span>
+              </div>
+              <div class="text-center mb-8">
+                <div class="flex justify-center items-baseline mb-4">
+                  <span class="text-5xl font-extrabold text-neutral-900">$49.95</span>
+                  <span class="text-neutral-600 ml-1">/month</span>
+                </div>
+                <p class="text-neutral-600">Perfect for getting started</p>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  200 min (1,200 REELS)
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  NO WATERMARK
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Unlimited Discription And tags generation
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Custom On Demand Templates
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 px-6 text-blue-600 font-medium border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                <a href="https://json2video.com/pricing/">GET STARTED</a>
+              </button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div
+              class="relative bg-neutral-900 rounded-2xl p-8 border border-blue-500 shadow-xl transform scale-105 z-10 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s;">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span class="bg-blue-500 text-white text-sm font-medium px-4 py-1 rounded-full">
+                  Most Popular
+                </span>
+              </div>
+              <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Startup</h3>
+                <div class="flex justify-center items-baseline mb-4">
+                  <span class="text-5xl font-extrabold text-white">$99.95</span>
+                  <span class="text-neutral-400 ml-1">/month</span>
+                </div>
+                <p class="text-neutral-400">Best for content creators</p>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-400">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  3,000 Video Generations
+                </li>
+                <li class="flex items-center text-neutral-400">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Premium Templates
+                </li>
+                <li class="flex items-center text-neutral-400">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Early Access
+                </li>
+                <li class="flex items-center text-neutral-400">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  API Access
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 px-6 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                <a href="https://json2video.com/pricing/">GET STARTED</a>
+              </button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div
+              class="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.4s;">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">
+                  Enterprise
+                </span>
+              </div>
+              <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-neutral-900 mb-4">199.95</h3>
+                <div class="flex justify-center items-baseline mb-4">
+                  <span class="text-5xl font-extrabold text-neutral-900">/months</span>
+                </div>
+                <p class="text-neutral-600">For large scale needs</p>
+              </div>
+              <ul class="space-y-4 mb-8">
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  7,800 Generations
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Free Human Video Editor and Channel Manager
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  24/7 Dedicated Support
+                </li>
+                <li class="flex items-center text-neutral-600">
+                  <svg class="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Custom Integration
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 px-6 text-blue-600 font-medium border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="c0425654-6d32-4b7d-b15b-26f66e50da1c" data-section-id="c0425654-6d32-4b7d-b15b-26f66e50da1c">
+
+  <htmlCode>
+    <div id="root">
+      <section id="testimonials" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-white mb-4">Our Users Love Us</h2>
+            <p class="text-lg text-neutral-400 max-w-2xl mx-auto">See what content creators are saying about Json2Video
+              Bot</p>
+          </div>
+
+          <!-- Testimonial Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-neutral-800 rounded-2xl p-8 border border-neutral-700 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp">
+              <div class="flex items-center mb-6">
+                <img
+                  src="https://yt3.googleusercontent.com/BHffcYUszc6OMr_sTTaau_-Ol9C1PZawoN3XMJJwwR3w5_4B9SokOacCesGFs3SGd25jcLGpcg=s160-c-k-c0x00ffffff-no-rj"
+                  alt="User Avatar" class="w-12 h-12 rounded-full object-cover">
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-white">Alchemy Motivation</h4>
+                  <p class="text-neutral-400">Content Creator 40k+</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-6">"Json2Video Bot has revolutionized my content creation process. I can now
+                create professional reels in seconds instead of hours!"</p>
+              <div class="flex text-yellow-400">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-neutral-800 rounded-2xl p-8 border border-neutral-700 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.2s;">
+              <div class="flex items-center mb-6">
+                <img
+                  src="https://yt3.googleusercontent.com/Q89_8NlG-EeHAsvazrCqvjQVnL3u1sHJ8RK9o09ksoA4cYr0oRwC4tRXA-vlB_1x_IUOWj6tbw=s160-c-k-c0x00ffffff-no-rj"
+                  alt="User Avatar" class="w-12 h-12 rounded-full object-cover">
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-white">SUCCESSFULL MINDSET</h4>
+                  <p class="text-neutral-400">Content Creator</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-6">"The API integration is fantastic! I've been able to automate my entire
+                content pipeline using Json2Video Bot."</p>
+              <div class="flex text-yellow-400">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-neutral-800 rounded-2xl p-8 border border-neutral-700 hover:border-blue-500 transition-all duration-300 animate__animated animate__fadeInUp"
+              style="animation-delay: 0.4s;">
+              <div class="flex items-center mb-6">
+                <img
+                  src="https://yt3.googleusercontent.com/BJnn7F7ZTJSHf8OHT-C29hmr6x7BprKLmiU4znEYGySPZwaSd2WH5u7gmlotMeGFSQRpf7-8=s160-c-k-c0x00ffffff-no-rj"
+                  alt="User Avatar" class="w-12 h-12 rounded-full object-cover">
+                <div class="ml-4">
+                  <h4 class="text-lg font-bold text-white">Hurricane.Motivation</h4>
+                  <p class="text-neutral-400">Social Media Agency</p>
+                </div>
+              </div>
+              <p class="text-neutral-300 mb-6">"Unlocked monetization in just a month! Ezz Pasive Income, GG!"</p>
+              <div class="flex text-yellow-400">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </htmlCode>
+</element>
+<element id="3c2e3a8a-5ce2-4055-a5ec-50515a93fc1b" data-section-id="3c2e3a8a-5ce2-4055-a5ec-50515a93fc1b">
+
+  <htmlCode>
+    <div id="root">
+      <section id="developers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate__animated animate__fadeIn">
+            <h2 class="text-4xl font-bold text-neutral-900 mb-4">Built With ❣️ And Support by </h2>
+          </div>
+          <section class="text-gray-400 bg-gray-900 body-font" style="background-color: white;">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-wrap -m-4">
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                      src="https://bootdey.com/img/Content/avatar/avatar7.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-white" style="color: black;">Manas Agarwal</h2>
+                      <h3 class="text-gray-500 mb-3">Developer</h3>
+                      <p class="mb-4">The visionary developer behind Json2Video Bot. He single-handedly brought this
+                        idea to life, sacrificing much to make it a reality.</p>
+                      <!-- <span class="inline-flex">
+                        <a class="text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                          </svg>
+                        </a>
+                      </span> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                      src="https://yt3.googleusercontent.com/BHffcYUszc6OMr_sTTaau_-Ol9C1PZawoN3XMJJwwR3w5_4B9SokOacCesGFs3SGd25jcLGpcg=s160-c-k-c0x00ffffff-no-rj">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-white" style="color: black;">Alchemy Motivation
+                      </h2>
+                      <h3 class="text-gray-500 mb-3">Content Creator</h3>
+                      <p class="mb-4"> A cornerstone of this project, he is a renowned content creator on YouTube
+                        specializing in motivational reels. He contributed premium clips for the bot, brought his design
+                        expertise, and played a vital role in refining the project.</p>
+                      <!-- <span class="inline-flex">
+                        <a class="text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                          </svg>
+                        </a>
+                      </span> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                      src="https://avatars.githubusercontent.com/u/111003115?v=4">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-white" style="color: black;">Joaquim Cardona</h2>
+                      <h3 class="text-gray-500 mb-3">Founder Of Json2Video</h3>
+                      <p class="mb-4">The founder of Json2Video and a key supporter of this project. He generously
+                        provided the resources that made it all possible.</p>
+                      <!-- <span class="inline-flex">
+                        <a class="text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-700">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                          </svg>
+                        </a>
+                      </span> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4 lg:w-1/4 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center">
+                    <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+                      src="https://th.bing.com/th/id/R.7fc10b3a24c51cde3ccbc224327526bd?rik=HAs4lfd4WL37HQ&riu=http%3a%2f%2fcdn.playbuzz.com%2fcdn%2f37a57e6e-3542-4b23-8ae7-a86a0618d75b%2f2ce5ba9a-662c-4502-95d9-10289968a1be.jpg&ehk=VHA0lOw%2bRTmHxGLZ5kpBDQLq9KWFzfYbPjh2QwiRDmQ%3d&risl=&pid=ImgRaw&r=0">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-white" style="color: black;">You</h2>
+                      <h3 class="text-gray-500 mb-3">JOIN US EMPTY POST</h3>
+                      <p class="mb-4">Our future Marketing Manager and Customer Champion. Be the driving force in
+                        showcasing our bot to the world and attracting new users to our platform! CONTACT US ON DISCORD
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+</element>
+<element id="0867abf1-f269-4aa6-b2d5-dca6efbf9727" data-section-id="0867abf1-f269-4aa6-b2d5-dca6efbf9727">
+
+  <htmlCode><div>
+    <div id="root">
+      <footer id="footer" class="pt-20 pb-10" style="background-color: black;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <!-- Company Info -->
+            <div class="col-span-1 md:col-span-2">
+              <img src="https://json2video.com/images/json2video-logo.svg" alt="Json2Video Bot Logo" class="h-8 mb-6">
+              <p class="text-neutral-400 mb-6">Transform your social media presence with cutting-edge AI that creates,
+                edits, and optimizes reels and shorts like never before- ALL WITHIN SECONDS.</p>
+              <div class="flex space-x-4">
+                <a href="#" class="text-neutral-400 hover:text-blue-500 transition-colors">
+                  <img src="https://www.lueurai.com/static/assets/images/Facebook.jpg" alt="Facebook" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-neutral-400 hover:text-blue-500 transition-colors">
+                  <img src="https://www.lueurai.com/static/assets/images/instagram.png" alt="Instagram" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-neutral-400 hover:text-blue-500 transition-colors">
+                  <img src="https://www.lueurai.com/static/assets/images/tiktok.png" alt="TikTok" class="h-6 w-6">
+                </a>
+                <a href="#" class="text-neutral-400 hover:text-blue-500 transition-colors">
+                  <img src="https://www.lueurai.com/static/assets/images/youtube.png" alt="YouTube" class="h-6 w-6">
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-white font-semibold mb-6">Quick Links</h3>
+              <ul class="space-y-4">
+                <li><a href="#hero" class="text-neutral-400 hover:text-blue-500 transition-colors">Home</a></li>
+                <li><a href="#features" class="text-neutral-400 hover:text-blue-500 transition-colors">Features</a></li>
+                <li><a href="#pricing" class="text-neutral-400 hover:text-blue-500 transition-colors">Pricing</a></li>
+                <li><a href="#developers" class="text-neutral-400 hover:text-blue-500 transition-colors">Developers</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+              <h3 class="text-white font-semibold mb-6">Contact Us</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a href="https://discord.com/users/1058058594660143116" class="flex items-center text-neutral-400 hover:text-blue-500 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    CONTACT DEVELOPER
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/4HBpPnYE4W" class="flex items-center text-neutral-400 hover:text-blue-500 transition-colors">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
+                    Join Discord Server
+                  </a>
+                </li>
+                <li>
+                  <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    Contact Us
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="pt-8 border-t border-neutral-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <p class="text-neutral-400 text-sm mb-4 md:mb-0">
+                © 2025 Json2Video. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div></div>
+  </htmlCode>
+</element>
+<div id="page_complete">
+  <script>
+    console.log('Page complete');
+  </script>
+  </body>
+
+  </html>
